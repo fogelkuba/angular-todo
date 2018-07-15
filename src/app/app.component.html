@@ -1,4 +1,10 @@
 <h3 class="text-white bg-primary p-3">Lista {{getName()}}</h3>
+
+<div class="my-3">
+<input class="form-control" #todoText/>
+<button class="btn btn-primary mt-3" (click)="addItem(todoText.value)">Dodaj</button>
+</div>
+
 <table class="table table-striper table-bordered">
   <thead>
   <tr>
