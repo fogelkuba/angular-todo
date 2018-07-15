@@ -9,26 +9,15 @@
   </thead>
   <tbody>
 
-  <!--<tr>-->
-    <!--<td>Kupić kwiaty</td>-->
-    <!--<td>Nie</td>-->
-  <!--</tr>-->
-  <!--<tr>-->
-    <!--<td>Kupić buty</td>-->
-    <!--<td>Tak</td>-->
-  <!--</tr>-->
-  <!--<tr>-->
-    <!--<td>Kupić bilety</td>-->
-    <!--<td>Nie</td>-->
-  <!--</tr>-->
-
   <tr *ngFor="let item of getTodoItems(); let i = index">
     <td>{{i + 1}}</td>
     <td>{{item.action}}</td>
+    <td><input type="checkbox" [(ngModel)]="item.done"></td>
     <td [ngSwitch]="item.done">
       <span *ngSwitchCase="true">Tak</span>
       <span *ngSwitchDefault>Nie</span>
     </td>
   </tr>
+
   </tbody>
 </table>
